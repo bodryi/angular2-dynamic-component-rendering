@@ -25,10 +25,12 @@ export class MapComponent implements OnInit {
 
 	    this.renderService.attachCustomPopUpsToMap(this.mapService.getMap());
 
-	    let myPopUp = L.popup["angular"]({
-		                                     data: 'you can provide here anything you want',
-		                                     popupComponentType: CustomPopUpComponent
-	                                     });
+	    let options = {
+		    data: 'you can provide here anything you want',
+		    popupComponentType: CustomPopUpComponent
+	    };
+
+	    let myPopUp = L.popup(options);
 
 	    marker.bindPopup(myPopUp);
     }

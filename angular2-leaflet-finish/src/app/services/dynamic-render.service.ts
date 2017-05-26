@@ -7,7 +7,6 @@ import {
 	ComponentRef
 } from '@angular/core';
 import { Map } from "leaflet";
-import "../plugins/leaflet-angular.plugin"
 
 @Injectable()
 export class RenderService {
